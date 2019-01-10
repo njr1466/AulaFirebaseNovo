@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -44,7 +45,9 @@ public class MainActivityDataBase extends AppCompatActivity  {
         setContentView(R.layout.activity_main_data_base);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
-        listView = (ListView) findViewById(R.id.listviewId);
+        listView =  findViewById(R.id.listviewId);
+
+        // LISTENER DO LISTVIEW
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
@@ -53,6 +56,8 @@ public class MainActivityDataBase extends AppCompatActivity  {
                         .setMessage("Tem certeza que deseja deletar esse registro?")
                         .setPositiveButton("sim",
                                 new DialogInterface.OnClickListener() {
+
+                                    //MÉTODO QUE É ACIONADO COM O CLIQUE EM UM REGISTRO DO LISTVIEW
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         Aluno alunoSelecionado = arrayOfUsers.get(position);
@@ -68,7 +73,8 @@ public class MainActivityDataBase extends AppCompatActivity  {
         });
         myRef.addValueEventListener(new ValueEventListener() {
 
-
+            // MÉTODO QUE É ACIONADO QUANDO HÁ UMA CONEXÃO COM O
+            // BANCO OU QUANDO HÁ UMA ALTERAÇÃO DE ALGUM DADO
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -99,14 +105,21 @@ public class MainActivityDataBase extends AppCompatActivity  {
 
     }
 
+    // MÉTODO QUE É SALVA OS DADOS NO BANCO NO FIREBASE
     public void salvarDatabase(View view) {
         Random gerador = new Random();
         int id = gerador.nextInt(100);
-        Aluno aluno = new Aluno(id, "Marcio Jr", "Artes", "3107383422");
-        myRef.child("Alunos").child(String.valueOf(id))
-                .setValue(aluno);
+        EditText nome = (EditText) findViewById(R.id.editTextNomeAluno);
 
+        if(!(nome.getText().toString().trim().isEmpty())) {
+            Aluno aluno = new Aluno(id, nome.getText().toString(), "Artes", "3107383422");
+            myRef.child("Alunos").child(String.valueOf(id))
+                    .setValue(aluno);
+            nome.setText("");
 
+        }else{
+            Toast.makeText(getApplicationContext(), "É necessário preencher o campo ", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editTextNomeAluno"
         android:onClick="salvarDatabase"
         android:text="Salvar"
         tools:layout_editor_absoluteX="5dp"
@@ -25,7 +25,7 @@
         android:layout_below="@+id/button2" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextNomeAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
