@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "507770380597",
+    "firebase_url": "https://fir-a1805.firebaseio.com",
+    "project_id": "fir-a1805",
+    "storage_bucket": "fir-a1805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507770380597:android:4c59d510b4a0985b",
+        "android_client_info": {
+          "package_name": "notificacao.nilsonjunior.example.com.ne.aulafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507770380597-mrtnbke0nrn8ph5q7838gb3rr8m6g3fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "notificacao.nilsonjunior.example.com.ne.aulafirebase",
+            "certificate_hash": "93d8a6cd7e211fd99c295da07d61d3c869aeaa45"
+          }
+        },
+        {
+          "client_id": "507770380597-7fr8riv8evicq6uil4gbsh1849n8slep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArod-jVvmmtixjPPVXO5yW7r0EFT2TOVc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507770380597-7fr8riv8evicq6uil4gbsh1849n8slep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507770380597:android:2bf4f76a789056e6",
+        "android_client_info": {
+          "package_name": "notificacao.nilsonjunior.example.com.ne.aulafirebasenovo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507770380597-rpl58am6lj34lne1dv2rgj1bc3mk97u7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "notificacao.nilsonjunior.example.com.ne.aulafirebasenovo",
+            "certificate_hash": "93d8a6cd7e211fd99c295da07d61d3c869aeaa45"
+          }
+        },
+        {
+          "client_id": "507770380597-7fr8riv8evicq6uil4gbsh1849n8slep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArod-jVvmmtixjPPVXO5yW7r0EFT2TOVc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507770380597-7fr8riv8evicq6uil4gbsh1849n8slep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
