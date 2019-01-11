@@ -1,20 +1,16 @@
 package notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.DataBase;
 
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,12 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
-import notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.AutenticacaoGoogle.MainActivity;
-import notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.CustomListView.AdpaterAlunosPersonalizados;
-import notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.CustomListView.MainActivityCustomListView;
 import notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.R;
 
 public class MainActivityDataBase extends AppCompatActivity  {
@@ -88,7 +80,7 @@ public class MainActivityDataBase extends AppCompatActivity  {
                         android.R.layout.activity_list_item, arrayOfUsers);
 
 
-                AdpaterAlunosPersonalizados adapterAlunos = new AdpaterAlunosPersonalizados(arrayOfUsers,MainActivityDataBase.this);
+                AdapterAlunosPersonalizados adapterAlunos = new AdapterAlunosPersonalizados(arrayOfUsers,MainActivityDataBase.this);
 
                 listView.setAdapter(adapterAlunos);
 
@@ -112,7 +104,7 @@ public class MainActivityDataBase extends AppCompatActivity  {
         EditText nome = (EditText) findViewById(R.id.editTextNomeAluno);
 
         if(!(nome.getText().toString().trim().isEmpty())) {
-            Aluno aluno = new Aluno(id, nome.getText().toString(), "Artes", "3107383422");
+            Aluno aluno = new Aluno(id, nome.getText().toString(), "Computação", "34220028343");
             myRef.child("Alunos").child(String.valueOf(id))
                     .setValue(aluno);
             nome.setText("");
