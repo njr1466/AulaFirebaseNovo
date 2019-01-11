@@ -1,4 +1,4 @@
-package notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.CustomListView;
+package notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.DataBase;
 
 import android.app.Activity;
 import android.view.View;
@@ -15,12 +15,12 @@ import notificacao.nilsonjunior.example.com.ne.aulafirebasenovo.R;
  * Created by nilsonjunior on 10/01/19.
  */
 
-public class AdpaterAlunosPersonalizados extends BaseAdapter {
+public class AdapterAlunosPersonalizados extends BaseAdapter {
 
     private final List<Aluno> alunos;
     private final Activity act;
 
-    public AdpaterAlunosPersonalizados(List<Aluno> cursos, Activity act) {
+    public AdapterAlunosPersonalizados(List<Aluno> cursos, Activity act) {
         this.alunos = cursos;
         this.act = act;
     }
